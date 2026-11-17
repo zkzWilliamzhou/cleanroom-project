@@ -1,0 +1,14 @@
+{
+  "command": "python3 -m unittest discover -s tests",
+  "shell": false,
+  "timeout": 60,
+  "total_budget": 300,
+  "max_trials": 80,
+  "repeat": 1,
+  "exclude": [".git", ".cleanroom", "__pycache__", ".pytest_cache", ".mypy_cache"],
+  "artifact_dirs": ["dist", "build", "node_modules", ".venv", "venv", "__pycache__", ".pytest_cache"],
+  "dotfiles": [".gitconfig", ".npmrc", ".yarnrc"],
+  "knobs": ["env", "dotfiles", "path", "artifacts", "locale", "network", "clock"],
+  "inject_env": {},
+  "format": "terminal"
+}

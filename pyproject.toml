@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# Package metadata lives in setup.cfg. Using PEP 621's [project] table here
+# would silently produce an UNKNOWN-0.0.0 wheel on setuptools < 61 when build
+# isolation is disabled, which is common in offline CI.
+
+[tool.cleanroom]
+command = "python3 -m unittest discover -s tests"
